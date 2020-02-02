@@ -1,0 +1,259 @@
+.navbar-default {
+    background-color: rgba(129,53,136,.98);
+    border-color:black;
+  
+}
+
+.navbar-toggler { 
+    background-color: rgba(129,53,136,.98);
+    border-color: rgba(129,53,136,.98);
+}
+
+.navbar-toggler-icon { 
+    background-image: url( 
+"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); 
+} 
+
+.nav-link{
+    color: #fff
+}
+
+
+  
+
+.active-purple-4 input[type=text]:focus:not([readonly]) {
+    border: 1px solid rgba(129,53,136,.98);
+    box-shadow: 0 0 0 1px rgba(129,53,136,.98);
+    }
+
+.active-purple-4 input[type=number]:focus:not([readonly]) {
+    border: 1px solid rgba(129,53,136,.98);
+    box-shadow: 0 0 0 1px rgba(129,53,136,.98);
+}
+
+    
+.exp{
+      box-shadow: 0 0 0 1px rgba(129,53,136,.98); -webkit-box-shadow: none; 
+}
+
+.icon{
+    position :absolute;
+    left:15px;
+    top: 3px;
+    padding: 9px 8px;
+    color: #969592 
+}
+
+.cardsalary{
+    position :absolute;
+    left:80px;
+    bottom:12px;
+    padding: 9px 8px;
+    color: #969592 
+    
+    
+}
+
+.cardicon  {
+    color:  rgba(0,0,0,.7);
+    
+    
+}
+
+.loc-sal {
+    font-size: 0.9rem;
+    line-height: 1.42857;
+    font-weight: 500;
+    color: rgba(0,0,0,.8);
+}
+
+
+.create{
+    font-size: 0.7rem;
+    line-height: 3.1;
+    font-weight: 600;
+    color: rgba(0,0,0,.6);
+}
+
+.iconcompany{
+    position :absolute;
+    left:12px;
+    top: 66px;
+    padding: 9px 8px;
+    color: #969592 
+}
+
+.namecompany{
+    position :absolute;
+    left:18px;
+    top: 70px;
+    padding: 9px 8px;
+    color: #969592 
+    
+}
+
+.my-select {
+    background-color: white;
+    border: 1px solid silver;
+    padding: 6px 20px;
+    box-shadow: 0px 0px 1px;
+    color: rgba(129,53,136,.98);
+  }
+  /* border-radius: 20px; */
+  /* color: rgba(129,53,136,.98); */
+
+
+
+.col{
+    margin: 0px;
+}
+.t-24 {
+    font-size: 2.5rem;
+    line-height: 1.33333;
+}
+.t-light {
+    font-weight: 200;
+}
+.t-black {
+    color: rgba(0,0,0,.9);
+}
+.display-flex {
+    display: flex!important;
+}
+.pb4 {
+    padding-bottom: 16px!important;
+}
+
+
+.btn-footer{
+    background-color: rgba(129,53,136,.98);
+    color: white;
+}
+.jb-end{
+color: red
+}
+.jb-to{
+color: green
+}
+.viewcard{
+    margin-top: 20px;
+}
+.navpost-btn{
+    font-weight: 600;
+    background-color: rgba(129,53,136,.98);
+    color:#fff;
+    text-align: center;
+    font-family: inherit;
+    border-color: #fff;
+    margin-left: 5ex;
+    margin-right: 3ex;
+    
+}
+
+.foot{
+    margin-top: 20px;
+}
+
+.spin {
+    position: fixed;
+    height: 2em;
+    width: 2em;
+    overflow: show;
+    margin: auto;
+    top: 200px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  
+  /* Transparent Overlay */
+  .spinner_overlay {
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: brown;
+    opacity: 0.2;
+    z-index: 1000;
+}
+
+
+section {
+    padding: 60px 0;
+    margin-top: 0.5rem
+}
+
+section .section-title {
+    text-align: center;
+    color: rgba(129,53,136,.98);
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+#footer {
+    background: rgba(129,53,136,.98) !important;
+}
+#footer h5{
+	padding-left: 10px;
+    border-left: 3px solid #eeeeee;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color:#ffffff;
+}
+#footer a {
+    color: #ffffff;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+#footer ul.social li{
+	padding: 3px 0;
+}
+#footer ul.social li a i {
+    margin-right: 5px;
+	font-size:25px;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.social li:hover a i {
+	font-size:30px;
+	margin-top:-10px;
+}
+#footer ul.social li a,
+#footer ul.quick-links li a{
+	color:#ffffff;
+}
+#footer ul.social li a:hover{
+	color:#eeeeee;
+}
+#footer ul.quick-links li{
+	padding: 3px 0;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.quick-links li:hover{
+	padding: 3px 0;
+	margin-left:5px;
+	font-weight:700;
+}
+#footer ul.quick-links li a i{
+	margin-right: 5px;
+}
+#footer ul.quick-links li:hover a i {
+    font-weight: 700;
+}
+
+@media (max-width:767px){
+	#footer h5 {
+    padding-left: 0;
+    border-left: transparent;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}}
+
+.footeradd{
+    color: #ffffff
+}

@@ -1,0 +1,81 @@
+<ng4-loading-spinner *ngIf="showSpinner"></ng4-loading-spinner>
+
+<div class="container-fluid col-lg-10" >
+    <div class="row">
+        <div class="card col-md-10">
+            <div class="card-body">
+                <h4 class="jt-24 jt-black jt-light pb4 display-flex ">{{jobDetails.title}}</h4>
+                <h6 class="cn pb4 display-flex" style="margin-top: 1px"><i class="fa fa-building-o" aria-hidden="true"></i>&nbsp;&nbsp;{{jobDetails.companyname}}</h6>
+                <p class="loc"><i class="fa fa-black-tie " aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;{{jobDetails.experience[0]+" - "+jobDetails.experience[1]}}&nbsp;Years</p>
+                
+                <p class="loc"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;{{jobDetails.location}}</p>
+                <p class="pos" *ngIf="jobDetails.noOfDays==1"><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Posted:&nbsp;{{jobDetails.noOfDays}} day ago</p>
+                <p class="pos" *ngIf="jobDetails.noOfWeeks==1"><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Posted:&nbsp;{{jobDetails?.noOfWeeks}} week ago</p>
+                <p class="pos" *ngIf="jobDetails.noOfDays>1 && jobDetails.noOfDays<7"><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Posted:&nbsp;{{jobDetails.noOfDays}} days ago</p>
+                <p class="pos" *ngIf="jobDetails.noOfWeeks>1 && jobDetails.noOfDays<30"><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Posted:&nbsp;{{jobDetails?.noOfWeeks}} weeks ago</p>
+                <p class="pos" *ngIf="jobDetails.noOfMonths==1"><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Posted:&nbsp;{{jobDetails.noOfMonths}} Month ago</p>
+                <p class="pos" *ngIf="jobDetails.noOfMonths>1"><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Posted:&nbsp;{{jobDetails.noOfMonths}} Months ago</p>
+                <hr>
+
+                <h6 class="jd-t"><u>Job Description</u></h6>
+                <!-- <p ng-bind-html="jobDetails.jd"></p> -->
+                <p class="des" id="jdesc"></p>
+                <!-- <ckeditor data="{{jobDetails.jd}}" [editor]="Editor" disabled="false"></ckeditor> -->
+                <h6 class="jd-t"><u>Experience Required</u>&nbsp;&nbsp;{{jobDetails.experience[0]+" - "+jobDetails.experience[1]}}&nbsp;Years</h6><br>
+                <h6 class="jd-t"><u>Salary</u>&nbsp;&nbsp;<i class="fa fa-rupee"></i>&nbsp;&nbsp;{{jobDetails.salary}}</h6><br>
+                <h6 class="jd-t"><u>Skills</u></h6>
+                <ul *ngFor="let skill of jobDetails.skills"><li>{{skill}}</li></ul>
+                 <a href="{{jobDetails.applylink}}" class="btn pull-right" role="button">Apply Job</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="footer" *ngIf="showSpinner">
+    <div class="container-fluid">
+        <div class="row text-center text-xs-center text-sm-left text-md-left" style="margin-left: 0.8rem">
+            <div class="col-xs-12 col-sm-3 col-md-3">
+                <h5>Search Your Job</h5>
+                <ul class="list-unstyled quick-links">
+                    <li><a href=""><i class="fa fa-angle-double-right"></i>Home</a></li>
+                    <li><a href=""><i class="fa fa-angle-double-right"></i>Find Jobs</a></li>
+                    <li><a href=""><i class="fa fa-angle-double-right"></i>Post Jobs</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <h5>Stay Connected</h5>
+                <ul class="list-unstyled quick-links">
+                    <li><a href=""><i class="fa fa-angle-double-right"></i>Contact us</a></li>
+                    <li><a href=""><i class="fa fa-angle-double-right"></i>About us</a></li>
+                    <li><a href=""><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+                </ul>
+    </div>
+
+    <div class="col-xs-12 col-sm-4 col-md-4 footeradd">
+                <h5>ChakriPao Job search</h5>
+                <P>Address:- BN- A240/356, Minto Bypass Road ABC Nagar,</P><p>District- Jarvisgunj</p>
+    </div>
+    
+  </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                <ul class="list-unstyled list-inline social text-center">
+                    <li class="list-inline-item"><a href=""><i class="fa fa-facebook"></i></a></li>
+                    <li class="list-inline-item"><a href=""><i class="fa fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href=""><i class="fa fa-instagram"></i></a></li>
+                    <li class="list-inline-item"><a href=""><i class="fa fa-google-plus"></i></a></li>
+                    <li class="list-inline-item"><a href="" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+            </div>
+            <hr>
+        </div>	
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                <p><u><a href="">ChakriPao JOB search</a></u> is a job search portal, Inc. Jarvis [a wholly owned subsidiary of Aakash Jaj]</p>
+                <p class="h6">© 2019 ChakriPao JOB portal. All rights reserved | Design by Aakash Jaj<a class="text-green ml-2" href="https://www.linkedin.com/in/akash-kumar-a5232b126/" target="_blank">ShivaTech</a></p>
+            </div>
+            <hr>
+        </div>	
+    </div>
+</section>
+<!-- ./Footer -->

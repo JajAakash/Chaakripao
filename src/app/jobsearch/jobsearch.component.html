@@ -1,0 +1,141 @@
+<div class="container-fluid col-md-10">
+    <div class="row">
+        <div class="card" style="margin-top: 15px;width: 100% ">
+            <div class="card-body" style="margin-left:0%">
+                <h4 class="t-24 t-black t-light display-flex justify-center pb4">
+                    Search your dream Jobs...
+                </h4>
+                
+                <form [formGroup]="jobsearchForm">
+                    <div class="row">
+
+                        <div class="col form-group">
+                            <div class="active-purple-3 active-purple-4 mb-4">
+                                <i class="fa fa-search fa-lg icon" aria-hidden="true"></i>
+                                <input class="form-control" type="text" placeholder="Search jobs by Skills" formControlName="skills" aria-label="Search" style="padding-left: 40px;width: 300px;">
+                            </div>                            
+                        </div>
+
+                        <div class="col form-group">
+                            <div class="active-purple-3 active-purple-4 mb-4">
+                                <i class="fa fa-map-marker fa-lg icon" aria-hidden="true"></i>
+                                <input class="form-control" type="text" placeholder="Search location" formControlName="location" aria-label="Search" style="padding-left: 40px; width: 300px;">
+                            </div>
+                        </div>
+
+                        <div class="col form-group">
+                            <div class="active-purple-3 active-purple-4 mb-4">
+                                <i class="fa fa-black-tie fa-lg icon" aria-hidden="true"></i>
+                                <input class="form-control" type="number" placeholder="Search Experience in Years" formControlName="experience" aria-label="Search" style="padding-left: 40px; width: 300px;">
+                                
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="active-purple-3 active-purple-4 mb-4">
+                                <button type="button" class="btn  btn btn-footer pull-right" id="submit" (click)="getJob()">Search</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <!-- <mat-spinner class="spin spinner" *ngIf="showSpinner"></mat-spinner> -->
+        <!-- <ng4-loading-spinner *ngIf="showSpinner"></ng4-loading-spinner> -->
+        <ng4-loading-spinner *ngIf="showSpinner"> </ng4-loading-spinner>
+        
+        <div class="card" style="margin-top: 1.5rem" *ngIf="!showSpinner">
+                <div class="card-body" >
+                    <div class="row">
+                        
+                            <div class="col-sm-12 col-lg-6 viewcard" *ngFor="let item of filterjob | paginate: { itemsPerPage: count, currentPage: p }">
+                                
+                                <div class="card h-100" >
+                                    <div class="card-body">
+                                        <h5 class="card-title"><h5 class="card-title">{{item.title}}</h5></h5><br>
+                                        <div><h6 class="card-subtitle mb-2 text-muted cardicon"><i class="fa fa-building-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;{{item.companyname}}</h6></div>
+                                        <p class="loc-sal"><i class="fa fa-map-marker cardicon" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;{{item.location}}</p>
+                                        <p class="loc-sal"><i class="fa fa-money cardicon" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<i class="fa fa-rupee"></i>&nbsp;{{item.salary}} </p>
+                                        <div>
+                                            <button class="btn btn-footer" [disabled]="! item.jobValid" type="submit" id="submit" (click)="applyJob(item._id)">Apply</button>
+                                            
+                                            <div class="create pull-right" *ngIf="item.noOfWeeks==1 && item.jobValid">Posted:&nbsp;{{item.noOfWeeks}} week ago</div>
+                                            <div class="create pull-right" *ngIf="item.noOfWeeks>1 && item.noOfDays<30 && item.jobValid">Posted:&nbsp;{{item.noOfWeeks}} weeks ago</div>
+                                            <div class="create pull-right" *ngIf="item.noOfMonths==1 && item.jobValid">Posted:&nbsp;{{item.noOfMonths}} Month ago</div>
+                                            <div class="create pull-right" *ngIf="item.noOfMonths>1 && item.jobValid">Posted:&nbsp;{{item.noOfMonths}} Months ago</div>
+                                            <div class="create pull-right" *ngIf="item.noOfDays==1 && item.jobValid">Posted:&nbsp;{{item.noOfDays}} day ago</div>
+                                            <div class="create pull-right" *ngIf="item.noOfDays>1 && item.noOfDays<7 && item.jobValid">Posted:&nbsp;{{item.noOfDays}} days ago</div>
+                                            <div class="create pull-right jb-to" *ngIf="item.noOfDays==0 && item.jobValid">Posted:&nbsp;Today </div>
+                                            <div class="create pull-right jb-end" *ngIf="! item.jobValid">No longer accepting applications </div>
+                                        </div>
+                                        
+                                    </div>
+                                        
+                                </div>
+                            </div>
+                            
+                    </div>
+                    <!--Including the pagination control.-->
+                    <footer class="foot">
+                        <div class="text-right">
+                            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                        </div>
+                    </footer>
+                    
+                </div>
+        </div>
+    </div>
+    
+</div>
+
+<section id="footer" *ngIf="!showSpinner">
+    <div class="container-fluid">
+        <div class="row text-center text-xs-center text-sm-left text-md-left" style="margin-left: 0.8rem">
+            <div class="col-xs-12 col-sm-3 col-md-3">
+                <h5>Search Your Job</h5>
+                <ul class="list-unstyled quick-links">
+                    <li><a href=""><i class="fa fa-angle-double-right"></i>Home</a></li>
+                    <li><a href=""><i class="fa fa-angle-double-right"></i>Find Jobs</a></li>
+                    <li><a href=""><i class="fa fa-angle-double-right"></i>Post Jobs</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <h5>Stay Connected</h5>
+                <ul class="list-unstyled quick-links">
+                    <li><a href=""><i class="fa fa-angle-double-right"></i>Contact us</a></li>
+                    <li><a href=""><i class="fa fa-angle-double-right"></i>About us</a></li>
+                    <li><a href=""><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+                </ul>
+    </div>
+
+    <div class="col-xs-12 col-sm-4 col-md-4 footeradd">
+                <h5>ChakriPao Job search</h5>
+                <P>Address:- BN- A240/356, Minto Bypass Road ABC Nagar,</P><p>District- Jarvisgunj</p>
+    </div>
+    
+  </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                <ul class="list-unstyled list-inline social text-center">
+                    <li class="list-inline-item"><a href=""><i class="fa fa-facebook"></i></a></li>
+                    <li class="list-inline-item"><a href=""><i class="fa fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href=""><i class="fa fa-instagram"></i></a></li>
+                    <li class="list-inline-item"><a href=""><i class="fa fa-google-plus"></i></a></li>
+                    <li class="list-inline-item"><a href="" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+            </div>
+            <hr>
+        </div>	
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                <p><u><a href="">ChakriPao JOB search</a></u> is a job search portal, Inc. Jarvis [a wholly owned subsidiary of Aakash Jaj]</p>
+                <p class="h6">© 2019 ChakriPao JOB portal. All rights reserved | Design by Aakash Jaj<a class="text-green ml-2" href="https://www.linkedin.com/in/akash-kumar-a5232b126/" target="_blank">ShivaTech</a></p>
+            </div>
+            <hr>
+        </div>	
+    </div>
+</section>
+<!-- ./Footer -->
+
