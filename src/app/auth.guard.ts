@@ -7,7 +7,7 @@ import { SigninAuthService } from './signin-auth/signin-auth.service';
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
-  constructor(private signinServ:SigninAuthService,private router:Router){}
+  constructor(public signinServ:SigninAuthService,private router:Router){}
 
   canActivate():boolean{
     if(this.signinServ.loggedIn()){

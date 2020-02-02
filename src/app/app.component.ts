@@ -9,6 +9,6 @@ import {SigninAuthService} from './signin-auth/signin-auth.service'
 export class AppComponent {
   title = 'Chakripao';
 
-  constructor(private signinServ:SigninAuthService) { }
+  constructor(public signinServ:SigninAuthService) { }
 }
 
