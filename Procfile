@@ -1,1 +1,1 @@
-web:ngnode index.js
+web: node index.js
