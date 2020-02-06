@@ -28,16 +28,16 @@ export class InformationService {
       i.jobValid=(new Date(i.enddate)>new Date(this.currentDate));
   }
 }
- postJobUrl='http://localhost:5000/byjusjobs/job/listed';
-  jobSearch='https://chakripao.herokuapp.com/byjusjobs/jobs';
-  jobbylocationurl='http://localhost:5000/byjusjobs/jobsin/';
-  jobbyskillsurl='http://localhost:5000/byjusjobs/jobs-for/';
-  jobbyExpurl='http://localhost:5000/byjusjobs/jobs-experience/';
-  jobbyidurl='http://localhost:5000/byjusjobs/jobs/';
-  jobbylocskill='http://localhost:5000/byjusjobs/jobs/';
-  jobbyexpskill='http://localhost:5000/byjusjobs/skill/exp/';
-  jobsbyexploc='http://localhost:5000/byjusjobs/exp/loc/';
-  jobsbyall='http://localhost:5000/byjusjobs/jobs/';
-  googleLogin='http://localhost:5000/auth/google'
+ postJobUrl='https://naukrichakri.herokuapp.com/byjusjobs/job/listed';
+  jobSearch='https://naukrichakri.herokuapp.com/byjusjobs/jobs';
+  jobbylocationurl='https://naukrichakri.herokuapp.com/byjusjobs/jobsin/';
+  jobbyskillsurl='https://naukrichakri.herokuapp.com/byjusjobs/jobs-for/';
+  jobbyExpurl='https://naukrichakri.herokuapp.com/byjusjobs/jobs-experience/';
+  jobbyidurl='https://naukrichakri.herokuapp.com/byjusjobs/jobs/';
+  jobbylocskill='https://naukrichakri.herokuapp.com/byjusjobs/jobs/';
+  jobbyexpskill='https://naukrichakri.herokuapp.com/byjusjobs/skill/exp/';
+  jobsbyexploc='https://naukrichakri.herokuapp.com/byjusjobs/exp/loc/';
+  jobsbyall='https://naukrichakri.herokuapp.com/byjusjobs/jobs/';
+  googleLogin='https://naukrichakri.herokuapp.com/auth/google'
   
 }
