@@ -27,7 +27,9 @@ export class InformationService {
       i.noOfMonths=noOfMonths;
       i.jobValid=(new Date(i.enddate)>new Date(this.currentDate));
   }
+
 }
+
  postJobUrl='https://naukrichakri.herokuapp.com/byjusjobs/job/listed';
   jobSearch='https://naukrichakri.herokuapp.com/byjusjobs/jobs';
   jobbylocationurl='https://naukrichakri.herokuapp.com/byjusjobs/jobsin/';
@@ -38,6 +40,9 @@ export class InformationService {
   jobbyexpskill='https://naukrichakri.herokuapp.com/byjusjobs/skill/exp/';
   jobsbyexploc='https://naukrichakri.herokuapp.com/byjusjobs/exp/loc/';
   jobsbyall='https://naukrichakri.herokuapp.com/byjusjobs/jobs/';
-  googleLogin='https://naukrichakri.herokuapp.com/auth/google'
- 
+  googleLogin='https://naukrichakri.herokuapp.com/auth/login/'
+  
+
+
+
 }
