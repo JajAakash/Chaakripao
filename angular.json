@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "BYJUSJOBS": {
+    "CHAAKRIPAO": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/BYJUSJOBS",
+            "outputPath": "dist/CHAAKRIPAO",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -69,18 +69,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "BYJUSJOBS:build"
+            "browserTarget": "CHAAKRIPAO:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "BYJUSJOBS:build:production"
+              "browserTarget": "CHAAKRIPAO:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "BYJUSJOBS:build"
+            "browserTarget": "CHAAKRIPAO:build"
           }
         },
         "test": {
@@ -118,16 +118,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "BYJUSJOBS:serve"
+            "devServerTarget": "CHAAKRIPAO:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "BYJUSJOBS:serve:production"
+              "devServerTarget": "CHAAKRIPAO:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "BYJUSJOBS"
+  "defaultProject": "CHAAKRIPAO"
 }
