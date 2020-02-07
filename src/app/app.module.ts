@@ -41,7 +41,7 @@ export function socialConfigs() {
         // for dev enviroment google_provider_id
         // provider: new GoogleLoginProvider('95434812881-nl4280nc6f0kbukd8upsv78qrikf1h9a.apps.googleusercontent.com')  
 
-         //prod enviroment google_provider_id
+         //for prod enviroment google_provider_id
         provider: new GoogleLoginProvider('265370481252-27c9mrnac121u15d9qskrg84ds6r3e0n.apps.googleusercontent.com')  
       }  
     ]  
