@@ -39,5 +39,5 @@ export class InformationService {
   jobsbyexploc='https://naukrichakri.herokuapp.com/byjusjobs/exp/loc/';
   jobsbyall='https://naukrichakri.herokuapp.com/byjusjobs/jobs/';
   googleLogin='https://naukrichakri.herokuapp.com/auth/google'
-  
+ 
 }
