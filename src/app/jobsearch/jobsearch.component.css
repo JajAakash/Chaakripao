@@ -128,6 +128,8 @@
 .btn-footer{
     background-color: rgba(129,53,136,.98);
     color: white;
+    box-shadow: 0 0 0 1px rgba(129,53,136,.98);
+    border: 1px solid whitesmoke
 }
 .jb-end{
 color: red

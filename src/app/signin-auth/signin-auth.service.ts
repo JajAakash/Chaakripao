@@ -19,7 +19,6 @@ export class SigninAuthService {
     //this.url =  'http://localhost:5000/auth/login/';
     this.url=this.inforService.googleLogin;
     return this._http.post(this.url,responce);
-    // .pipe(map((response: Response) => response.json()));
   }
 
   loggedIn(){
