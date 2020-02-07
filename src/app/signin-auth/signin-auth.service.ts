@@ -16,8 +16,10 @@ export class SigninAuthService {
   url;
 
   loginresponse(responce):Observable<any>{
-    this.url =  this.inforService.googleLogin;
+    //this.url =  'http://localhost:5000/auth/login/';
+    this.url=this.inforService.googleLogin;
     return this._http.post(this.url,responce);
+    // .pipe(map((response: Response) => response.json()));
   }
 
   loggedIn(){
