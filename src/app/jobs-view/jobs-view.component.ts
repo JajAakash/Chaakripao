@@ -30,7 +30,6 @@ export class JobsViewComponent implements OnInit {
     }
 
     else if(this.infoService.skills==undefined && this.infoService.location==undefined && this.infoService.experience!=undefined){
-      console.log("qwerty12345678")
       this.jobList= await this.jobService.getJobsbyExperience().toPromise();
     }
 
@@ -68,24 +67,10 @@ export class JobsViewComponent implements OnInit {
 
   }
   applyJob(jobid:string){
-
-    //this.showSpinner=true;
-    // setTimeout(()=>{
-    //   this.showSpinner=false;},6000);
-    
-
     this.infoService.jobid=jobid;
     this.router.navigate(['/apply']);
 
   }
-
-
-  // async loggedin(){
-  //   this.userlogin=await this.signinService.googleLogin().toPromise();
-  //   console.log("here in ghanta",this.userlogin)
-  //   return console.log(this.userlogin)
-  // }
-
   
   ngOnInit() {
       this.jobs(); 

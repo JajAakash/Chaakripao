@@ -12,7 +12,6 @@ constructor(private _http:HttpClient,private inforService:InformationService) {
   
   getJobs():Observable<any>{
     return this._http.get(this.inforService.jobSearch);
-    // .pipe(map((response: Response) => response.json())); this was the last line with every methods
     
   }
 
