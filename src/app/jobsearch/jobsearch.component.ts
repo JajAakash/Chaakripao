@@ -48,10 +48,13 @@ export class JobsearchComponent implements OnInit {
     // setTimeout(()=>{
     //   this.showSpinner=false;},6000);
     this.spinnerService.show();
-    setTimeout(()=>this.showSpinner=false,3000)
+    //setTimeout(()=>this.showSpinner=false,3000)
     
     this.filterjob = await this.jobService.getJobs().toPromise();
-    this.infoservice.jobs(this.filterjob);
+    if(this.filterjob){
+      this.infoservice.jobs(this.filterjob);
+      this.showSpinner=false;
+    }
     
   }
    
