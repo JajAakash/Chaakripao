@@ -114,7 +114,10 @@
                 <ckeditor [editor]="Editor" (change)="onChange($event)" tagName="textarea"></ckeditor>
               </div>
 
+
+              <div *ngIf="!jobdataForm.valid">Please Enter Company Name
               <button class="btn-lg btn-block subtn" id="submit" (click)="postJobs()" [disabled]="!jobdataForm.valid">Post job requirements</button>
+              </div>
               <a href = "jobs" class="btn-lg btn-block subtn" id="submit" >View jobs</a>
             
               

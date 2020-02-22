@@ -23,13 +23,16 @@ export class SigninAuthComponent implements OnInit {
 public socialLogIn(socialProvider: string) {  
   let socialPlatformProvider;  
   if (socialProvider === 'google') {  
-    socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;  }
-  // } else if (socialProvider === 'google') {  
-  //   socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;  
-  // }  
-  this.OAuth.signIn(socialPlatformProvider).then(user => {    
-    this.Loginresponse(user);
-  });  
+    socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
+    this.OAuth.signIn(socialPlatformProvider).then(user => {    
+      this.Loginresponse(user);
+    });  
+  } 
+  
+  else if (socialProvider === 'linkedin') {  
+      this.linkedinLoginresponse();
+  }  
+    
 }  
 Loginresponse(user) {  
   this.loginService.loginresponse(user).subscribe(
@@ -38,7 +41,16 @@ Loginresponse(user) {
     localStorage.setItem('token', res);  
     this.router.navigate(['/jobs']);  
   })  
-}  
+}
+
+linkedinLoginresponse() {  
+  this.loginService.linkedinloginresponse().subscribe(
+    (res: any) => {    
+    //this.response = res; 
+    localStorage.setItem('token', res);  
+    this.router.navigate(['/jobs']);  
+  })  
+}
 
 
   ngOnInit() {
