@@ -24,14 +24,14 @@ public socialLogIn(socialProvider: string) {
   let socialPlatformProvider;  
   if (socialProvider === 'google') {  
     socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
-    this.OAuth.signIn(socialPlatformProvider).then(user => {    
-      this.Loginresponse(user);
-    });  
   } 
   
-  else if (socialProvider === 'linkedin') {  
-      this.linkedinLoginresponse();
+  else if (socialProvider === 'facebook') {  
+    socialPlatformProvider = FacebookLoginProvider.PROVIDER_ID;
   }  
+  this.OAuth.signIn(socialPlatformProvider).then(user => {    
+    this.Loginresponse(user);
+  });  
     
 }  
 Loginresponse(user) {  

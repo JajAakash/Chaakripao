@@ -21,8 +21,8 @@ export class SigninAuthService {
   }
 
   linkedinloginresponse():Observable<any>{
-    this.url =  'https://naukrichakri.herokuapp.com/auth/linkedin';
-    //this.url='http://localhost:5000/auth/linkedin/';
+    //this.url =  'https://naukrichakri.herokuapp.com/auth/linkedin';
+    this.url='http://localhost:5000/auth/linkedin/';
     return this._http.get(this.url);
   }
 

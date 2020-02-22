@@ -33,16 +33,16 @@ export function socialConfigs() {
     [  
       {  
         id: FacebookLoginProvider.PROVIDER_ID,  
-        provider: new FacebookLoginProvider('81uzyj2zrneoe6')  
+        provider: new FacebookLoginProvider('1070699819954615')  
       },  
       {  
         id: GoogleLoginProvider.PROVIDER_ID,
 
         //for prod enviroment google_provider_id
-        provider: new GoogleLoginProvider('265370481252-27c9mrnac121u15d9qskrg84ds6r3e0n.apps.googleusercontent.com')
+        //provider: new GoogleLoginProvider('265370481252-27c9mrnac121u15d9qskrg84ds6r3e0n.apps.googleusercontent.com')
         
         //for dev enviroment google_provider_id
-        //provider: new GoogleLoginProvider('95434812881-nl4280nc6f0kbukd8upsv78qrikf1h9a.apps.googleusercontent.com')  
+        provider: new GoogleLoginProvider('95434812881-nl4280nc6f0kbukd8upsv78qrikf1h9a.apps.googleusercontent.com')  
       }  
     ]  
   );  
